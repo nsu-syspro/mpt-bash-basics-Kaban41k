@@ -1,0 +1,12 @@
+#!/bin/bash
+a=()
+n=0
+while read -r l; do
+  a+=("$l")
+  n=$(( $n+1 ))
+done
+
+while [ $n -gt 0 ]; do
+  n=$(( $n-1 ))
+  echo "${a[n]}"
+done
