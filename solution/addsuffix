@@ -2,7 +2,7 @@
 flag="1"
 for arg in "$@"; do
   if [ $flag == "0" ]; then
-    mv $arg $arg$1
+    mv "$arg" "$arg$1"
   else  
     flag="0"
   fi
