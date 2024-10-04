@@ -1,0 +1,3 @@
+#!/bin/bash
+mkdir $1.unpacked
+tar -xpf $1 $1.unpucked/
