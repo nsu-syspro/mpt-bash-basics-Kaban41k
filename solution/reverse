@@ -1,9 +1,12 @@
 #!/bin/bash
-s_l=0
-for str in $(cat $1); do
-  s_l=$(( $s_l+1 ))
+a=()
+n=0
+while read -r l; do
+  a+=("$l")
+  n=$(( $n+1 ))
 done
-while [ $s_l -gt 0 ]; do
-  sed $s_l'!d' $1
-  s_l=$(( $s_l-1 ))
+
+while [$n -gt 0]; do
+  n=$(( $n-1 ))
+  echo "${a[n]}"
 done
