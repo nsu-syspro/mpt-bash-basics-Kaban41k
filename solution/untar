@@ -1,5 +1,5 @@
 #!/bin/bash
-if ! [ -d ./$1.unpucked ]; then
-  mkdir "./$1.unpucked"
+if ! [ -d ./$1.unpacked ]; then
+  mkdir "./$1.unpacked"
 fi
-tar -xpf "$1" -C "./$1.unpucked"
+tar -xpf "$1" -C "./$1.unpacked"
